@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>sema_vendor</name>
+  <version>0.1.0</version>
+  <description>The ROS sema library provider package</description>
+  <maintainer email="chester.tseng@adlinktech.com">YuSheng Tseng</maintainer>
+  <license>Apache 2.0</license>
+  <url type="website">https://github.com/Adlink-ROS</url>
+  <author email="chester.tseng@adlintkech.com">YuSheng Tseng</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+
+  <exec_depend>roscpp</exec_depend>
+
+</package>
