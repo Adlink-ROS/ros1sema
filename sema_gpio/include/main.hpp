@@ -12,31 +12,25 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include "main.hpp"
+#ifndef _SEMA_GPIO_MAIN_HPP_H_
+#define _SEMA_GPIO_MAIN_HPP_H_
 
-int main(int argc, char* argv[]) {
+// standard headers
+#include <iostream>
 
-  uint32_t ret;
-  uint32_t handler;
+// roscpp headers
+#include <ros/ros.h>
+#include <ros/console.h>
 
-  // Initial sema
-  ret = SemaEApiLibInitialize(false,
-      IP_V4,
-      "127.0.0.1",
-      0,
-      (char *)"",
-      &handler);
-
-  if (ret != EAPI_STATUS_SUCCESS) {
-    std::cout << "Initial sema failed" << std::endl;
-    return 0;
-  }
-
-  std::cout << "Initial sema success" << std::endl;
-
-  ros::init(argc, argv, "talker");
-
-  ros::NodeHandle n;
-
-  return 0;
+#ifdef __cplusplus
+extern "C" {
+#endif
+// sema headers
+  #include <linux/EApiOs.h>
+  #include <EApi.h>
+  #include <semaeapi.h>
+#ifdef __cplusplus
 }
+#endif
+
+#endif /* _SEMA_GPIO_MAIN_HPP_H_ */

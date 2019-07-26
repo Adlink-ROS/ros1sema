@@ -27,36 +27,36 @@ if (libsema_INCLUDE_DIR AND libsema_LIBRARY_DIR)
   set_target_properties(semaeapi PROPERTIES
     INTERFACE_INCLUDE_DIRECTORIES
     $<BUILD_INTERFACE:${libsema_INCLUDE_DIRS}>
-    IMPORTED_LOCATION ${libsema_LIBRARY_DIR}/libsemaeapi.so.3.5
+    IMPORTED_LOCATION ${libsema_LIBRARY_DIR}/libsemaeapi.so.3.6
     )
 
   add_library(sema SHARED IMPORTED)
   set_target_properties(sema PROPERTIES
     INTERFACE_INCLUDE_DIRECTORIES
     $<BUILD_INTERFACE:${libsema_INCLUDE_DIRS}>
-    IMPORTED_LOCATION ${libsema_LIBRARY_DIR}/libsema.so.3.5
+    IMPORTED_LOCATION ${libsema_LIBRARY_DIR}/libsema.so.3.6
     )
 
   add_library(sema_hwlinux SHARED IMPORTED)
   set_target_properties(sema_hwlinux PROPERTIES
     INTERFACE_INCLUDE_DIRECTORIES
     $<BUILD_INTERFACE:${libsema_INCLUDE_DIRS}>
-    IMPORTED_LOCATION ${libsema_LIBRARY_DIR}/libsema_hwlinux.so.1.6
+    IMPORTED_LOCATION ${libsema_LIBRARY_DIR}/libsema_hwlinux.so.1.7
     )
 
   add_library(EApi_1 SHARED IMPORTED)
   set_target_properties(EApi_1 PROPERTIES
     INTERFACE_INCLUDE_DIRECTORIES
     $<BUILD_INTERFACE:${libsema_INCLUDE_DIRS}>
-    IMPORTED_LOCATION ${libsema_LIBRARY_DIR}/libEApi_1.so.3.5
+    IMPORTED_LOCATION ${libsema_LIBRARY_DIR}/libEApi_1.so.3.6
     )
   # NOTE: SEMA 3.6 R.0 doesn't have log4cpp
-  add_library(log4cpp SHARED IMPORTED)
-  set_target_properties(log4cpp PROPERTIES
-    INTERFACE_INCLUDE_DIRECTORIES
-    $<BUILD_INTERFACE:${libsema_INCLUDE_DIRS}>
-    IMPORTED_LOCATION ${libsema_LIBRARY_DIR}/liblog4cpp.so.5
-    )
+  # add_library(log4cpp SHARED IMPORTED)
+  # set_target_properties(log4cpp PROPERTIES
+  #   INTERFACE_INCLUDE_DIRECTORIES
+  #   $<BUILD_INTERFACE:${libsema_INCLUDE_DIRS}>
+  #   IMPORTED_LOCATION ${libsema_LIBRARY_DIR}/liblog4cpp.so.5
+  #   )
 
 else ()
   set(libsema_INCLUDE_DIR "")
