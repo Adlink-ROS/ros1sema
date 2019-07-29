@@ -51,7 +51,7 @@ Briefly, there are 4 steps.
 
 ## Search environment SEMA_BSP_PATH
 
-export SEMA_BSP_PATH=<location of your sema>
+export SEMA_BSP_PATH= "where you put sema library"
 
 ## Override your target's  runpath (this step is optional)
 
