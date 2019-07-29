@@ -49,6 +49,10 @@ Briefly, there are 4 steps.
 
 [link libsema to your target](https://github.com/Adlink-ROS/ros1sema/blob/1df3b170932971b1e6c566675773ea11e022873e/sema_gpio/CMakeLists.txt#L38)
 
+## Search environment SEMA_BSP_PATH
+
+export SEMA_BSP_PATH=<location of your sema>
+
 ## Override your target's  runpath (this step is optional)
 
 [override rpath for your targets](https://github.com/Adlink-ROS/ros1sema/blob/1df3b170932971b1e6c566675773ea11e022873e/sema_gpio/CMakeLists.txt#L41)
